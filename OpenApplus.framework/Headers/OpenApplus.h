@@ -12,7 +12,9 @@
 #import "OARequestWrapper.h"
 #import "OATinyProgramController.h"
 @interface OpenApplus : NSObject
-
+/**
+ 创建一个小程序viewController
+ */
 +(id<OATinyProgramController> )makeTinyProgramController;
 
 +(void)setupCallback:(OpenApplusCallback)callback;
