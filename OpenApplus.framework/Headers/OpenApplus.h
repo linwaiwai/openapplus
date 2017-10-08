@@ -10,20 +10,10 @@
 #import <Foundation/Foundation.h>
 #import "OAConfiguration.h"
 #import "OARequestWrapper.h"
-
-
-//
-//
-////! Project version number for OpenApplus.
-//FOUNDATION_EXPORT double OpenApplusVersionNumber;
-//
-////! Project version string for OpenApplus.
-//FOUNDATION_EXPORT const unsigned char OpenApplusVersionString[];
-//
-//// In this header, you should import all the public headers of your framework using statements like #import <OpenApplus/PublicHeader.h>
-
-
+#import "OATinyProgramController.h"
 @interface OpenApplus : NSObject
+
++(id<OATinyProgramController> )makeTinyProgramController;
 
 +(void)setupCallback:(OpenApplusCallback)callback;
 /**

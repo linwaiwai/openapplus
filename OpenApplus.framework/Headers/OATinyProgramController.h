@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OATinyProgramInternalViewController.h"
 
 
-@interface OATinyProgramController : OATinyProgramInternalViewController
+@protocol OATinyProgramController
 
 -(void)navigateToMiniProgram:(NSString*)name;
-
 -(void)navigateBack;
 
 @end
