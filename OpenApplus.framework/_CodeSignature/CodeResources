@@ -2494,11 +2494,11 @@
 		</data>
 		<key>Headers/OpenApplus.h</key>
 		<data>
-		gpPDLfze77GzEmN+yMKrg895Npg=
+		yMKGFt5RGM92ly8QdmemjVKftxA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HVFe541XZB42/cK9wKZ/AkFJV0Y=
+		vQs2KOYoF6uudCxLfvCth58/ZKM=
 		</data>
 		<key>MJRefresh.bundle/arrow@2x.png</key>
 		<data>
@@ -2535,6 +2535,33 @@
 		<data>
 		3M0l5J/TDqoUIQnGTYydSEKSYD0=
 		</data>
+		<key>PGDatePicker.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B0ZscVflgWIeLzbitINLAoJjwbY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>PGDatePicker.bundle/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y2q+LR6t6BPjeiNiDG7TJde8FCY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>PGDatePicker.bundle/zh-Hant.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2aiey8huVrcJ2JXW1E+WoUeICYw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
 		oqIJzVxhZua/CZX+TGK3kylFilY=
@@ -9682,11 +9709,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gpPDLfze77GzEmN+yMKrg895Npg=
+			yMKGFt5RGM92ly8QdmemjVKftxA=
 			</data>
 			<key>hash2</key>
 			<data>
-			piTGRn5WUWQhnBkt28OmiJalPbIBZIC6cGql8MQUWcw=
+			NOGW4alcBl82gaNEP5s5HDl7YiZrYmIm5avxhjs7ivE=
 			</data>
 		</dict>
 		<key>MJRefresh.bundle/arrow@2x.png</key>
@@ -9749,6 +9776,45 @@
 			<data>
 			YkQmzGg/aRdVZmiGcVTEkzg7SQJ9cPzv49wp7ZFZ3hI=
 			</data>
+		</dict>
+		<key>PGDatePicker.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B0ZscVflgWIeLzbitINLAoJjwbY=
+			</data>
+			<key>hash2</key>
+			<data>
+			8iDcsR7d31XyRC+aK5dI1Y4O14v1fiIPptJib/W+k4E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>PGDatePicker.bundle/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y2q+LR6t6BPjeiNiDG7TJde8FCY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Pt+utPELvYT/iPlLztrmXRuS8/vIhCIkSeOhqwVZnys=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>PGDatePicker.bundle/zh-Hant.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2aiey8huVrcJ2JXW1E+WoUeICYw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ooF7F9Y5TZNjI5zm5TtV5eLaN4NPl+HsplOWDKPnJaI=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>SVProgressHUD.bundle/angle-mask.png</key>
 		<dict>
