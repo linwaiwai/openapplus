@@ -12,10 +12,12 @@
 #import "OARequestWrapper.h"
 #import "OATinyProgramController.h"
 @interface OpenApplus : NSObject
-
+/**
+ 进入小容器容器
+ */
 +(void)navigateToMiniProgram:(NSString *)url;
 /**
- 创建一个小程序viewController
+ 设置navigationController
  */
 +(void)setNavigationController:(UINavigationController *)navigationController;
 
