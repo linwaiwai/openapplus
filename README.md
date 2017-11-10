@@ -2,6 +2,8 @@
 
 ## 官方网站
 http://www.openapplus.com
+## 捐赠热线:
+   <img src="https://raw.githubusercontent.com/linwaiwai/openapplus/master/wechat.jpeg" alt="Donate with Alipay or Wechat Pay" title="Donate with Alipay or Wechat Pay" width="200"/>
 ## 参考链接
 http://www.jianshu.com/p/9c289f784928
 ## iOS集成
