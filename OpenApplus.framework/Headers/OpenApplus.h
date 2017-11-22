@@ -37,5 +37,7 @@
 
 + (OARequestWrapper*)requestWithAppKey:(NSString*)appKey andSecret:(NSString*)secret;
 
++(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+
 
 @end
