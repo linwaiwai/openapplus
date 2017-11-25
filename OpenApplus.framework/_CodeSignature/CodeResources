@@ -2498,11 +2498,11 @@
 		</data>
 		<key>Headers/OpenApplus.h</key>
 		<data>
-		tOfAoRz1vckADl7dmk+fgBEMdfI=
+		lAoDeIWKfLHzsS0qPPch3S829wc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9tjN2vDVjDPw00jHcVSvAiv1TtY=
+		uDJf90/iAcDZ+mUUeImQe7HwCV0=
 		</data>
 		<key>MJRefresh.bundle/arrow@2x.png</key>
 		<data>
@@ -2810,6 +2810,10 @@
 		<key>navIcon@3x.png</key>
 		<data>
 		LqlEmRfL9uHeN+W22/nxh9Lfmso=
+		</data>
+		<key>openapplus.cer</key>
+		<data>
+		5k80zaR8sGArcSpC1sgbxPNrxNw=
 		</data>
 		<key>share_icon@2x.png</key>
 		<data>
@@ -9724,11 +9728,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tOfAoRz1vckADl7dmk+fgBEMdfI=
+			lAoDeIWKfLHzsS0qPPch3S829wc=
 			</data>
 			<key>hash2</key>
 			<data>
-			awF3MmTffZJP2dtjtURK+Ur4QOZ36RCUhN3VL5MDSlA=
+			8GttMTlq3NdaN/N9qrt0YoZitnPg5G0qtncazNTt8s4=
 			</data>
 		</dict>
 		<key>MJRefresh.bundle/arrow@2x.png</key>
@@ -10444,6 +10448,17 @@
 			<key>hash2</key>
 			<data>
 			2XvAagV3OzSXVeMmY06Kb3TDnLO2FDLAcWgTYAzmlDE=
+			</data>
+		</dict>
+		<key>openapplus.cer</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5k80zaR8sGArcSpC1sgbxPNrxNw=
+			</data>
+			<key>hash2</key>
+			<data>
+			vZ5jQwtScAYNQH81ZCl92Yp26kdSZHSRSGcHoxk4gbY=
 			</data>
 		</dict>
 		<key>share_icon@2x.png</key>
