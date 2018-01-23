@@ -7,15 +7,14 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "OAConfiguration.h"
 #import "OARequestWrapper.h"
-#import "OATinyProgramController.h"
 @interface OpenApplus : NSObject
 /**
  进入小容器容器
  */
-+(void)navigateToMiniProgram:(NSString *)url;
++ (void)navigateToMiniProgram:(NSString *)name completion:(dispatch_block_t)completion;
 /**
  设置navigationController
  */
