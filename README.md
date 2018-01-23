@@ -39,11 +39,9 @@ Pod::Spec.new do |s|
     s.dependency 'SDWebImage', '3.7.5'
     s.dependency 'SSZipArchive', '1.6.2'
     s.dependency 'SVProgressHUD', '2.1.2'
-    s.dependency 'Masonry', '1.0.2'
     s.dependency 'UMengUShare/Social/WeChat', '6.3.0'
     s.dependency 'MJRefresh', '3.1.12'
     s.dependency 'libextobjc', '~> 0.4.1'
-    s.dependency 'ASIHTTPRequest'
     s.dependency 'AFNetworking'
     s.dependency 'OpenUDID'
 
@@ -67,42 +65,7 @@ target 'openapplus-ios-demo' do
     pod 'OpenApplus', :podspec => './podspec/OpenApplus.podspec'
 end
 ```
-#### OpenApplus.podspec 内容
-```ObjectiveC
-Pod::Spec.new do |s|
-    s.name         = "OpenApplus"
-    s.version      = "1.0.0"
-    s.summary      = "OpenApplus framework"
-    s.homepage     = "http://github.com/linwaiwai/openapplus"
-    s.license      = { :type => 'OpenApplus License, Version 1.0.0', :text => <<-LICENSE
-      Licensed under the OpenApplus License, Version 1.0.0 (the "License");
-      you may not use this file except in compliance with the License.
-      LICENSE
-    }
-    s.author   = "linwaiwai"
-    s.platform     = :ios, "6.0.0"
-    s.source       = { :git => "https://github.com/linwaiwai/openapplus.git", :branch => "master"}
-    s.frameworks = "UIKit"
-    s.requires_arc = true
-    s.dependency 'SDWebImage', '3.7.5'
-    s.dependency 'SSZipArchive', '1.6.2'
-    s.dependency 'SVProgressHUD', '2.1.2'
-    s.dependency 'Masonry', '1.0.2'
-    s.dependency 'UMengUShare/Social/WeChat', '6.3.0'
-    s.dependency 'MJRefresh', '3.1.12'
-    s.dependency 'libextobjc', '~> 0.4.1'
-    s.dependency 'ASIHTTPRequest'
-    s.dependency 'AFNetworking'
-    s.dependency 'OpenUDID'
 
-    s.subspec 'OpenApplus' do |ss|
-        ss.vendored_frameworks = '*.framework'
-        ss.vendored_libraries = '*.a'
-        ss.source_files = '*.h'
-        ss.resource = '*.bundle'
-    end
-end
-```
 #### 在工程中Info.plist文件中添加如下项
 ```
 <key>NSAppTransportSecurity</key>
@@ -120,14 +83,24 @@ end
 
 2、调用 +sync 方法检查包更新。
 
-在ViewController.m中调用 loadPackage: 加载小程序项目，参数为在平台中创建的项目的名称。
+在AppDelegate.m或ViewController.m中调用 navigateToMiniProgram: 加载小程序项目，参数为在平台中创建的项目的名称。
 
 ```ObjectiveC
   #import <"openapplus/openapplus.h">
   @implementation AppDelegate
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:testViewController];
+      self.window.rootViewController = navigationController;
+      [self.window makeKeyAndVisible];
+
       [OpenApplus startWithAppKey:@"test"];
       [OpenApplus sync];
+      [OpenApplus setNavigationController:navigationController];
+      // JS_APPID 为小程序的APP_ID
+      [OpenApplus navigateToMiniProgram:@"openapplus://jsApp/#JS_APPID#" completion:^{
+        
+      }];
+
       ...
   }
   @end
