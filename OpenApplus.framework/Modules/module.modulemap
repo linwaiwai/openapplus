@@ -1,6 +1,0 @@
-framework module OpenApplus {
-  umbrella header "OpenApplus.h"
-
-  export *
-  module * { export * }
-}
