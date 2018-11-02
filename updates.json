@@ -1,0 +1,8 @@
+{
+  "OpenApplus-x64-prod": {
+    "update": "https://github.com/linwaiwai/openapplus/releases/download/OpenApplus-x64-prod-v0.0.3/OpenApplus.framework.zip",
+    "version": "0.0.3",
+    "ios": "https://github.com/linwaiwai/openapplus/releases/download/OpenApplus-x64-prod-v0.0.3/OpenApplus.framework.zip",
+    "android": "https://github.com/linwaiwai/openapplus/releases/download/OpenApplus-x64-prod-v0.0.3/openapplus-release.aar"
+  }
+}
