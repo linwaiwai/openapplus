@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--  <script src="https://appx/vconsole.min.js"></script>-->
+  <script>
+    if (!window.Promise) {
+      document.writeln('<script src="https://appx/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
+  <script>
+    if(self.ES6Promise) {
+      self.ES6Promise.polyfill();
+    }
+  </script>
+  <link rel="stylesheet" href="https://appx/af-appx.min.css" />
+  <style>
+    body {
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+<div id="__react-content"></div>
+<script src="https://appx/af-appx.min.js"></script>
+<script src="index.js"></script>
+<script>
+  (function () {
+    function onReady(callback) {
+      document.addEventListener('OpenApplusJSBridgeReady', function () {
+        callback({
+          bridge: window.OpenApplusJSBridge
+        });
+      });
+    }
+
+    window.bootstrapApp({
+      worker:'index.worker.js?version=5dd0d54f625718ba316b381abd5bbfaf',
+      onReady: onReady
+    });
+  })();
+</script>
+</body>
+</html>
