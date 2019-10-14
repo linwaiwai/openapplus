@@ -215,3 +215,8 @@ startActivity(intent);
 finish();
 
 ```
+
+### 问题
+
+1、lipo -info OpenApplus.framework/OpenApplus 如果发现缺少arm64支持，请下载压缩包的内容覆盖，可能是下载的问题。
+
