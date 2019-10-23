@@ -10,9 +10,11 @@
     <!--相机推近后的到地面的默认初始距离(米)-->
     <DefaultCamerah>50</DefaultCamerah>
     <!--相机角度前置车标多少米-->
-    <ForwardDis0>20</ForwardDis0>
+    <ForwardDis0>50</ForwardDis0>
     <!--相机角度前置车标多少米(针对掉头)-->
     <ForwardDis1>10</ForwardDis1>
+    <!--相机角度不可超出阈值-->
+    <ForwardDegreeMax>45</ForwardDegreeMax>
 
     <!--距离语音点多少米开始下压,0不检测语音点-->
     <DisBeforeSound>100</DisBeforeSound>
@@ -36,6 +38,15 @@
 
     <!--完成下压的限制距离(米)-->
     <LimitDis>10</LimitDis>
+    <!--低速行驶时相机视角是否往回摆-->
+    <LowSpeedTurnBack>0</LowSpeedTurnBack>
+
+    <!--车道切换、主辅路切换角度阀值（度）-->
+    <LaneSwitchAngle>15</LaneSwitchAngle>
+    <!--车道切换、主辅路切换中间转弯的方向线长度阀值(米)-->
+    <LaneSwitchDis>150</LaneSwitchDis>
+    <!--车道切换、主辅路切换忽略普通线也转弯的长度阀值(米)-->
+    <LaneSwitchIgnorDis>80</LaneSwitchIgnorDis>
     
     <!--转弯箭头距离车位置多远开始显示-->
     <TrunPicMaxDis>250</TrunPicMaxDis>
@@ -56,9 +67,9 @@
     <LineColorAlpha>204</LineColorAlpha>
 
     <!--方向线向前长度，单位"米"-->
-    <LineforwardLength>60</LineforwardLength>
+    <LineforwardLength>30</LineforwardLength>
     <!--方向线向后长度，单位"米"-->
-    <LinebackLength>60</LinebackLength>
+    <LinebackLength>30</LinebackLength>
     <!--方向线宽度，单位"米"-->
     <LineWidth>7.0</LineWidth>
     <!--车道线融合(0-255,0全透,暂无效)-->

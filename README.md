@@ -24,7 +24,7 @@ http://www.jianshu.com/p/9c289f784928
 ```ObjectiveC
 Pod::Spec.new do |s|
     s.name         = "OpenApplus"
-    s.version      = "1.0.0"
+    s.version      = "1.0.1"
     s.summary      = "OpenApplus framework"
     s.homepage     = "http://github.com/linwaiwai/openapplus"
     s.license      = { :type => 'OpenApplus License, Version 1.0.0', :text => <<-LICENSE
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
     }
     s.author   = "linwaiwai"
     s.platform     = :ios, "6.0.0"
-    s.source       = { :git => "https://github.com/linwaiwai/openapplus.git", :branch => "master"}
+    s.source       = { :git => "https://github.com/linwaiwai/openapplus.git", :tag => "1.0.1"}
     s.frameworks = "UIKit"
     s.requires_arc = true
     s.dependency 'SDWebImage', '3.7.5'
