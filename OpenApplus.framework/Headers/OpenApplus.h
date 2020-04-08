@@ -34,6 +34,8 @@
  */
 + (void)sync;
 
++ (void)enableLogging:(BOOL)enable;
+
 + (OAUserAuthRequestWrapper*)requestWithAppKey:(NSString*)appKey andSecret:(NSString*)secret;
 
 +(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;

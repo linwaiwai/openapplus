@@ -40907,7 +40907,7 @@ exports.default = function (library) {
       key: 'onChange',
       value: function onChange(mode, val) {
         var value = void 0;
-        var onChange = this.props.onChange;
+        var onChange = this.props.onChange || this.props.bindchange ;
 
         if (mode === 'selector') {
           value = val[0];

@@ -129,6 +129,12 @@ window = (function(){
             request:function(params){
                 this.invoke('request', params)
             },
+            showLoading:function(params){
+                this.invoke('showLoading', params)
+            },
+            hideLoading:function(params){
+               this.invoke('hideLoading', params)
+            },
             callBridgeSync: function(event, data){
                 console.debug("callInternalAPISync : "+ event + " withParam:" + JSON.stringify(data));
                 return callAPISync(event, data);
@@ -138,12 +144,12 @@ window = (function(){
                 self.OpenApplusJSBridge.on(event,fn);
             },
             invoke:function(event, params){
-                newParams = Object.assign({
+                var newParams = Object.assign({
                     success: function(res){
-                        params.success && params.success(res);
+                        params && params.success && params.success(res);
                     }, 
                     fail:function (res){
-                        params.fail && params.fail(res);
+                        params && params.fail && params.fail(res);
                     }
                 }, params);
                 this.call(event,newParams , function(res){
