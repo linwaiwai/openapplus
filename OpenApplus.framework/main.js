@@ -135,6 +135,9 @@ window = (function(){
             hideLoading:function(params){
                this.invoke('hideLoading', params)
             },
+            setNavigationBarTitle:function(params){
+                this.invoke('setNavigationBarTitle', params)
+            },
             callBridgeSync: function(event, data){
                 console.debug("callInternalAPISync : "+ event + " withParam:" + JSON.stringify(data));
                 return callAPISync(event, data);
