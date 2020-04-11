@@ -18,12 +18,13 @@ typedef NS_ENUM(NSInteger, OACallbackType){
 typedef void (^OpenApplusNotify)(id data , NSError *error);
 
 /**
- *  @brief 检验验证码完成后的回调Block.
- *
- *  @param response         获取验证码后成功返回的数据.
- *  @param error            错误信息.
+ *  @brief OpenApplus通知回调Block.
  */
 typedef void (^OpenApplusCallback)(OACallbackType type, id data, OpenApplusNotify notify , NSError *error);
+/**
+ *  @brief APP STOP完成后的回调Block.
+ */
+typedef void (^OpenApplusAppStopBlock)(NSString *jskey);
 
 
 
