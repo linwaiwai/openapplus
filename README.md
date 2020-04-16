@@ -42,7 +42,6 @@ Pod::Spec.new do |s|
     s.dependency 'SVProgressHUD', '2.1.2'
     s.dependency 'UMengUShare/Social/WeChat', '6.3.0'
     s.dependency 'MJRefresh', '3.1.12'
-    s.dependency 'libextobjc', '~> 0.4.1'
     s.dependency 'AFNetworking'
     s.dependency 'OpenUDID'
 
@@ -112,8 +111,28 @@ end
 ## Android集成
 ### Android Studio集成
 下载SDK功能组件，解压.zip文件得到相应组件包（openapplus-release.aar），在Android Studio的项目工程libs目录中拷入相关组件jar包。
-
 右键Android Studio的项目工程—>选择Open Module Settings —>在 Project Structure弹出框中 —>选择 Dependencies选项卡 —>点击左下“＋”—>选择组件包类型—>引入相应的组件包。
+### 或者使用gradle
+```
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
+```
+dependencies{
+   implementation ('com.openapplus:openapplus:1.0.3')
+   implementation 'com.eclipsesource.j2v8:j2v8:6.1.0@aar'
+}
+```
+详细添加位置请参考DEMO[https://github.com/linwaiwai/openapplus-demo/blob/master/Android/]
 ### 运行
 在项目工程的自定义application中的onCreate方法中添加以下两个方法：
 注意：一定要在主进程进行该项操作
