@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "OAConfiguration.h"
 #import "OAUserAuthRequestWrapper.h"
+#import "OAConfigureBuilder.h"
 @interface OpenApplus : NSObject
 /**
  进入小容器容器
@@ -55,5 +56,7 @@
 SDK版本号
 */
 +(NSString *)sdkVersion;
+
++(OAConfigureBuilder *)configure;
 
 @end
