@@ -202,6 +202,135 @@ finish();
 
 ```
 
+### Codova支持
+#### 自动安装
+##### 安装cordova
+```
+> npm install -g cordova
+> cordova create MyApp
+> cd Cordova-Demo
+> cordova platform add ios
+> cordova plugin add @openapplus/cordova-openapplus-plugin
+```
+
+##### 编写codova插件调用函数
+```javascript
+function onButtonClicked(){
+    var CordovaOpenApplusPlugin = cordova.plugins.CordovaOpenApplusPlugin;
+    CordovaOpenApplusPlugin.navigateToMiniProgram("openapplus://jsApp/Lr12JhPrE9bg7N4uoABBXY");
+}
+var app = {
+    // Application Constructor
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+        var CordovaOpenApplusPlugin = cordova.plugins.CordovaOpenApplusPlugin;
+        CordovaOpenApplusPlugin.start("oa606f78973e434c78933b869d8ba73c59","$2a$10$4bbR9ZNAhm74x3sckSLf/uPyR.E2JQvACCHP4xKtLt/OOpbJsiq9q");
+        CordovaOpenApplusPlugin.enableLogging(true);
+
+        document.querySelector('button').addEventListener('click', onButtonClicked);
+    },
+
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+    }
+};
+
+app.initialize();
+```
+
+##### 完整Demo下载地址
+[https://github.com/linwaiwai/openapplus-demo/](https://github.com/linwaiwai/openapplus-demo/)
+
+#### 手动安装
+##### 下载插件
+1、在Demo中找到插件下载CordovaOpenApplusPlugin
+2、修改插件配置文件plugin.xml
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-openapplus-plugin" version="0.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>CordovaOpenApplusPlugin</name>
+	<js-module name="CordovaOpenApplusPlugin" src="www/CordovaOpenApplusPlugin.js">
+		<clobbers target="cordova.plugins.CordovaOpenApplusPlugin" />
+	</js-module>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="CordovaOpenApplusPlugin">
+				<param name="ios-package" value="CordovaOpenApplusPlugin" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/CordovaOpenApplusPlugin.m" />
+		<!-- <framework src="lib/OpenApplus.framework" embed="true" custom="true" /> -->
+		<podspec>
+		  <config>
+		    <source url="https://github.com/CocoaPods/Specs.git"/>
+		  </config>
+		  <pods use-frameworks="true">
+		  <!--   <pod name="SDWebImage"  spec="3.7.5" />
+			<pod name="SSZipArchive"  spec="1.6.2" />
+			<pod name="SVProgressHUD"   spec="2.1.2" />
+			<pod name="UMengUShare/Social/WeChat"   spec="6.3.0" />
+			<pod name="MJRefresh"   spec="3.1.12" />
+			<pod name="libextobjc"   spec="~> 0.4.1" />
+			<pod name="AFNetworking"   spec="~> 3.2.1" /> -->
+			<pod name="OpenApplus"   podspec="../../plugins/cordova-openapplus-plugin/podspec/OpenApplus.podspec" />
+		  </pods>
+		</podspec>
+	</platform>
+</plugin>
+
+``` 
+为
+```
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-openapplus-plugin" version="0.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>CordovaOpenApplusPlugin</name>
+	<js-module name="CordovaOpenApplusPlugin" src="www/CordovaOpenApplusPlugin.js">
+		<clobbers target="cordova.plugins.CordovaOpenApplusPlugin" />
+	</js-module>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="CordovaOpenApplusPlugin">
+				<param name="ios-package" value="CordovaOpenApplusPlugin" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/CordovaOpenApplusPlugin.m" />
+		<framework src="lib/OpenApplus.framework" embed="true" custom="true" />
+		<podspec>
+		  <config>
+		    <source url="https://github.com/CocoaPods/Specs.git"/>
+		  </config>
+		  <pods use-frameworks="true">
+		        <pod name="SDWebImage"  spec="3.7.5" />
+			<pod name="SSZipArchive"  spec="1.6.2" />
+			<pod name="SVProgressHUD"   spec="2.1.2" />
+			<pod name="UMengUShare/Social/WeChat"   spec="6.3.0" />
+			<pod name="MJRefresh"   spec="3.1.12" />
+			<pod name="libextobjc"   spec="~> 0.4.1" />
+			<pod name="AFNetworking"   spec="~> 3.2.1" /> -->
+		  </pods>
+		</podspec>
+	</platform>
+</plugin>
+```
+3、创建lib目录，下载OpenApplus.framework 到 lib目录下
+4、cordova plugin add path/to/CordovaOpenApplusPlugin
+
 ### 问题
 
 1、lipo -info OpenApplus.framework/OpenApplus 如果发现缺少arm64支持，请下载压缩包的内容覆盖，可能是下载的问题。
